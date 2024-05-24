@@ -21,7 +21,9 @@ async def fechamento():
     tarefa1 = asyncio.create_task(calcular_bonus_funcionarios(vendas))
     tarefa2 = asyncio.create_task(calcular_imposto(faturamento))
     await tarefa1, tarefa2
-
+    #loop = asyncio.get_event_loop()
+    #loop.run_until_complete(asyncio.gather(calcular_bonus_funcionarios(vendas), calcular_imposto(faturamento)))
+    #loop.close()
     print("Finalizou")
 
 
